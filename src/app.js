@@ -5,8 +5,8 @@ function great(name) {
 
 module.exports = great;
 
-    if (require.main === module) {
-            console.log(great("world"));
-    }
+    // if (require.main === module) {
+    //         console.log(great("world"));
+    // }
     
     
