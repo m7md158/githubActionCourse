@@ -1,0 +1,29 @@
+# this run when a user pushes a commit to a branch or creates a pull request
+
+name: Push or Pull Request
+on:
+  push:
+    branches:
+      - main
+      - "release/**"
+    paths:
+      - "src/**"  
+
+  pull_request:
+    branches:
+      - main
+      - "release/**"
+    
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code 
+        uses: actions/checkout@v5.0.0
+      
+      - name: Run tests
+        run: npm test
+
+      
