@@ -1,1 +1,12 @@
+on:
+  workflow_dispatch: # to run workflow manually from github UI or CLI
 
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Deploy application 
+          run: echo "Deploying application...
+        
+   
